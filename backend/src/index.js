@@ -6,7 +6,7 @@ const path = require('path')
 const cors = require('cors')
 const app = express()
 
-mongoose.connect(process.env.APP_URL, { useNewUrlParser: true })
+mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true })
 
 app.use(express.json())
 app.use(cors())

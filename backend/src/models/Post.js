@@ -18,7 +18,7 @@ const PostSchema = new mongoose.Schema({
 
 PostSchema.pre('save', function () {
   if (!this.url && process.env.STORAGE_TYPE === 'local') {
-    this.URL = `${process.env.APP_URL}/files/${this.key}`
+    this.URL = `${process.env.MONGO_URL}/files/${this.key}`
   }
 })
 
